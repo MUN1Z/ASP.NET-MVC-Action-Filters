@@ -1,0 +1,31 @@
+﻿@model MVC.Models.Pessoa
+
+<table class="table table-hover table-striped">
+    <tbody>
+        <tr>
+            <td>
+                <img height="80" width="80" src="~/Content/felipe.jpg" alt="Sem foto"/>
+            </td>
+            <td>
+                <table>
+                    <tr>
+                        <td>@Html.DisplayFor(m => Model.Nome)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(m => Model.DataNascimento)</td>
+                    </tr>
+                    <tr>
+                        <td>@Html.DisplayFor(m => Model.Email)</td>
+                    </tr>
+                    <td>
+                        @Html.ActionLink("Editar", "Edit", new { id = Model.Codigo }, new { @class = "btn-sm btn-warning" })
+                        @Html.ActionLink("Detalhar", "Details", new { id = Model.Codigo }, new { @class = "btn-sm btn-info" })
+                        @Html.ActionLink("Excluir", "Delete", new { id = Model.Codigo }, new { @class = "btn-sm btn-danger" })
+                    </td>
+                </table>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
+
